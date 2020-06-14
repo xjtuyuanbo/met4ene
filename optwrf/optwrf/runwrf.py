@@ -885,7 +885,7 @@ class WRFModel:
             DATA_ROOT3 = ERA5_ROOT + 'e5.oper.fc.sfc.accumu/' + year_mo + '/'
         else:
             # Define the expected absolute paths to ERA data files
-            ERA5_ROOT = '/share/mzhang/jas983/wrf_data/data/ERA5/'
+            ERA5_ROOT = '/share/mzhang/by276/wrf_data/data/ERA5/'
             erafile_100u = ERA5_ROOT + 'EastUS_e5.oper.an.sfc.228_246_100u.ll025sc.' + date_suffix_01_end
             erafile_100v = ERA5_ROOT + 'EastUS_e5.oper.an.sfc.228_247_100v.ll025sc.' + date_suffix_01_end
             erafile_ssrd1 = ERA5_ROOT + 'EastUS_e5.oper.fc.sfc.accumu.128_169_ssrd.ll025sc.' + date_suffix_lastmo_16_01
@@ -1098,7 +1098,7 @@ def determine_computer():
     :return on_cheyenne: boolean
         True if working on the NCAR Cheyenne super computer where the group name is 'ncar'
     :return on_magma: boolean
-        True if working on Jeff Sward's account on the Cornell Magma cluster where the group name is 'pug-jas983'
+        True if working on Jeff Sward's account on the Cornell Magma cluster where the group name is 'pug-by276'
 
     """
     if 'GROUP' in os.environ:
@@ -1112,7 +1112,7 @@ def determine_computer():
             on_cheyenne = False
             on_aws = True
             on_magma = False
-        elif os.environ['GROUP'] == 'pug-jas983':
+        elif os.environ['GROUP'] == 'pug-by276':
             on_cheyenne = False
             on_aws = False
             on_magma = True
